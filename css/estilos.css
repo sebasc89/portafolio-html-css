@@ -56,6 +56,7 @@ ul {
     display: flex;
     justify-content: space-between;
     height: 100px;
+    flex-wrap: wrap;
 }
 
 .header ol {
@@ -83,6 +84,7 @@ ul {
     background-position-x: right;
     height: 350px;
     display: flex;
+    flex-wrap: wrap;
     align-items: center;
     justify-content: space-between;
 }
@@ -111,6 +113,7 @@ ul {
     border: 1px solid gray;
     border-radius: 10px;
     display: flex;
+    flex-wrap: wrap;
     margin-bottom: 15px;
     padding: 20px;
     align-items: center;
@@ -128,11 +131,15 @@ ul {
 }
 
 .project-details {
-    width: 500px;
+    width: 50%;
 }
 
 .project-imageContainer{
-    width: 500px;
+    width: 50%;
+}
+
+.project-imageContainer img {
+    max-width: 100%;
 }
 
 .project-couse,
@@ -163,6 +170,7 @@ ul {
     background-color: #1b2127;
     color: white;
     display: flex;
+    flex-wrap: wrap;
     align-items: center;
     justify-content: space-between;
 }
@@ -175,6 +183,7 @@ ul {
     background-color: black;
     display: flex;
     flex-wrap: wrap;
+    flex-wrap: wrap;
 }
 
 .event {
@@ -182,8 +191,8 @@ ul {
     background-color: white;
     border-radius: 10px;
     flex-shrink: 0;
-    margin: 10px;
-    width: 480px;
+    margin: 1%;
+    width: 48%;
     overflow: hidden;
 }
 
@@ -224,6 +233,7 @@ ul {
     background-color: #056fff;
     color:white;
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-between;
     height: 250px;
 }
@@ -279,7 +289,8 @@ ul {
 }
 
 .container {
-    width: 1000px;
+    max-width: 100%;
+    flex: 1;
     margin: 0 auto;
     display: inherit;
     justify-content: inherit;
@@ -287,3 +298,82 @@ ul {
     height: inherit;
     flex-wrap: inherit;
 }
+
+/* Pantallas grandes */
+@media screen and (max-width: 1024px){
+    body{
+    }
+}
+
+/* Tablets */
+@media screen and (max-width: 767px){
+    .header{
+        display: block;
+        height: auto;
+    }
+    .header ol {
+        display: initial;
+    }
+    .header ol li{
+        height: 50px;
+    }
+    .header a{
+        justify-content: center;
+    }
+    .header .logo {
+        text-align: center;
+    }
+    .project{
+        display: block
+    }
+    .project-imageContainer{
+        width: auto;
+        text-align: center;
+    }
+    .project-details{
+        width: auto;
+        font-size: 16px;
+    }
+    .project-title {
+        font-size: 1.5em;
+    }
+    .project-url{
+        font-size: 1em;
+    }
+    .project-url{
+        font-size: 1em;
+    }
+    .project-couse{
+        font-size: 1.2em;
+    }
+    .project-description{
+        font-size: .8em;
+    }
+    .project-couse .project-date .project-url{
+        margin: .3em 0;
+    }
+    .event {
+        width: auto;
+        flex-shrink: initial;
+        margin: 15px 20px;
+    }
+    .event img{
+        width: 100%;
+    }
+}
+
+/* Móviles */
+@media screen and (max-width: 480px){
+    .project-details{
+        width: auto;
+        font-size: 12px;
+    }
+}
+
+@media screen and (max-width: 320px){
+    body{
+    }
+}
+
+
+
